@@ -16,7 +16,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-
+import * as fs from 'fs';
 import { useSettings } from "@api/settings";
 import { classNameFactory } from "@api/Styles";
 import DonateButton from "@components/DonateButton";
@@ -29,8 +29,8 @@ import { Button, Card, Forms, React, Select, Slider, Switch } from "@webpack/com
 
 const cl = classNameFactory("vc-settings-");
 
-const DEFAULT_DONATE_IMAGE = "https://cdn.discordapp.com/emojis/1026533090627174460.png";
-const SHIGGY_DONATE_IMAGE = "https://media.discordapp.net/stickers/1039992459209490513.png";
+const DEFAULT_DONATE_IMAGE = readFileSync('../../../defaultdonate.txt', 'utf-8');
+const SHIGGY_DONATE_IMAGE = readFileSync('../../../shiggydonate.txt', 'utf-8');
 
 type KeysOfType<Object, Type> = {
     [K in keyof Object]: Object[K] extends Type ? K : never;
