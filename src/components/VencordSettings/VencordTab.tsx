@@ -16,6 +16,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+import { readFileSync } from 'fs';
 import { useSettings } from "@api/settings";
 import { classNameFactory } from "@api/Styles";
 import DonateButton from "@components/DonateButton";
