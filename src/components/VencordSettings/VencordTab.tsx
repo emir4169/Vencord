@@ -15,6 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
+
 import { useSettings } from "@api/settings";
 import { classNameFactory } from "@api/Styles";
 import DonateButton from "@components/DonateButton";
@@ -26,9 +27,8 @@ import { identity, useAwaiter } from "@utils/misc";
 import { Button, Card, Forms, React, Select, Slider, Switch } from "@webpack/common";
 
 const cl = classNameFactory("vc-settings-");
-
-const DEFAULT_DONATE_IMAGE = readFileSync('../../../defaultdonate.txt', 'utf-8');
-const SHIGGY_DONATE_IMAGE = readFileSync('../../../shiggydonate.txt', 'utf-8');
+const DEFAULT_DONATE_IMAGE = readFileSync("../../../defaultdonate.txt", "utf-8");
+const SHIGGY_DONATE_IMAGE = readFileSync("../../../shiggydonate.txt", "utf-8");
 
 type KeysOfType<Object, Type> = {
     [K in keyof Object]: Object[K] extends Type ? K : never;
