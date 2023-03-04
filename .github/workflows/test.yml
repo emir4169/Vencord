@@ -19,10 +19,7 @@ jobs:
               with:
                   node-version: 18
                   cache: "pnpm"
-
-            - name: Autofix, WHY PNPM WHY
-              run: pnpm --fix
-              
+                  
             - name: Install dependencies
               run: pnpm install --frozen-lockfile
 
